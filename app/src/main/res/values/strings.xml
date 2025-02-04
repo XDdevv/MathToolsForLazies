@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Math tools for dumbs</string>
+    <string name="math_utils_for_lazies">Math utilities for lazies</string>
+    <string name="tub_sonni_aniqlash_uchun_pastda_raqamni_kiriting_va_tekshirishni_bosing">Tub sonni aniqlash uchun pastda raqamni kiriting va tekshirishni bosing</string>
+    <string name="raqamni_kiriting">Raqamni kiriting</string>
+    <string name="tekshirish">Tekshirish</string>
+    <string name="raqam_noto_g_ri">Raqam noto\'g\'ri</string>
+    <string name="raqam_tub">Raqam tub</string>
+    <string name="raqam_tub_emas">Raqam tub emas</string>
+</resources>
