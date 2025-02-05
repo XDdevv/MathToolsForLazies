@@ -20,4 +20,9 @@
         android:name="com.abc.mathtoolsfordumbs.presentation.services.primeNumber.PrimeNumberFragment"
         android:label="fragment_prime_number"
         tools:layout="@layout/fragment_prime_number" />
+    <fragment
+        android:id="@+id/ekubEkukFinderFragment"
+        android:name="com.abc.mathtoolsfordumbs.presentation.services.ekubEkuk.EkubEkukFinderFragment"
+        android:label="fragment_ekub_ekuk_finder"
+        tools:layout="@layout/fragment_ekub_ekuk_finder" />
 </navigation>

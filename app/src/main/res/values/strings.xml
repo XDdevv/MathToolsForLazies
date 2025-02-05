@@ -7,4 +7,12 @@
     <string name="raqam_noto_g_ri">Raqam noto\'g\'ri</string>
     <string name="raqam_tub">Raqam tub</string>
     <string name="raqam_tub_emas">Raqam tub emas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ekub_ni_topish_uchun_raqamlarni_kiring_va_hisoblashni_bosing">EKUBni topish uchun raqamlarni kiring va hisoblashni bosing</string>
+    <string name="ekuk_ni_topish_uchun_raqamlarni_kiring_va_hisoblashni_bosing">EKUKni topish uchun raqamlarni kiring va hisoblashni bosing</string>
+    <string name="raqam_qo_shish">Raqam qo\'shish</string>
+    <string name="hisoblash">Hisoblash</string>
+    <string name="ekub_yoki_ekuk_ni_topish_uchun_kamida_2_ta_raqam_kiriting">EKUB yoki EKUK ni topish uchun kamida 2 ta raqam kiriting va raqam bo\'sh yoki 0 bo\'lishi mumkin emas</string>
+    <string name="javob">Javob: %1$s</string>
 </resources>

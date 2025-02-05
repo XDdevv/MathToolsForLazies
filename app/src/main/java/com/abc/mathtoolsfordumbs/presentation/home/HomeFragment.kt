@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         adapter = OptionsAdapter {
-            findNavController().navigate(it.fragmentId, null, setOption())
+            findNavController().navigate(it.fragmentId, it.bundle, setOption())
         }
 
         binding.listRv.adapter = adapter

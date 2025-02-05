@@ -20,4 +20,17 @@ class AlgorithmsRepositoryImpl @Inject constructor(
         return true
     }
 
+    override fun gcdMultiple(numbers: List<Int>): Int {
+        return numbers.reduce { acc, num -> gcd(acc, num) }
+    }
+
+    override fun lcmMultiple(numbers: List<Int>): Int {
+        return numbers.reduce { acc, num -> lcm(acc, num) }
+    }
+    fun gcd(a: Int, b: Int): Int {
+        return if (b == 0) a else gcd(b, a % b)
+    }
+    fun lcm(a: Int, b: Int): Int {
+        return (a / gcd(a, b)) * b
+    }
 }

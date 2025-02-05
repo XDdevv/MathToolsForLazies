@@ -10,4 +10,6 @@
     <color name="textPrimary">#212121</color>
     <color name="textSecondary">#757575</color>
     <color name="dividerColor">#BDBDBD</color>
+
+    <color name="warningColor">#E91E63</color>
 </resources>
