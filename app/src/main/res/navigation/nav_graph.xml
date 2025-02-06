@@ -25,4 +25,9 @@
         android:name="com.abc.mathtoolsfordumbs.presentation.services.ekubEkuk.EkubEkukFinderFragment"
         android:label="fragment_ekub_ekuk_finder"
         tools:layout="@layout/fragment_ekub_ekuk_finder" />
+    <fragment
+        android:id="@+id/factorizationNumberFragment"
+        android:name="com.abc.mathtoolsfordumbs.presentation.services.factorization.FactorizationNumberFragment"
+        android:label="fragment_factorization_number"
+        tools:layout="@layout/fragment_factorization_number" />
 </navigation>

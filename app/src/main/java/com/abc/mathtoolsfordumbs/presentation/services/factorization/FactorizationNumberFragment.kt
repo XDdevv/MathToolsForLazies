@@ -1,4 +1,4 @@
-package com.abc.mathtoolsfordumbs.presentation.services.primeNumber
+package com.abc.mathtoolsfordumbs.presentation.services.factorization
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,26 +8,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.abc.mathtoolsfordumbs.R
-import com.abc.mathtoolsfordumbs.databinding.FragmentPrimeNumberBinding
-import com.abc.mathtoolsfordumbs.databinding.FragmentSplashBinding
-import com.abc.mathtoolsfordumbs.presentation.services.primeNumber.vm.PrimeNumberViewModel
-import com.abc.mathtoolsfordumbs.utils.hideKeyboard
+import com.abc.mathtoolsfordumbs.databinding.FragmentFactorizationNumberBinding
+import com.abc.mathtoolsfordumbs.presentation.services.factorization.vm.FactorizationViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class PrimeNumberFragment : Fragment() {
+class FactorizationNumberFragment : Fragment() {
 
-    private var _binding: FragmentPrimeNumberBinding? = null
+    private var _binding: FragmentFactorizationNumberBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: PrimeNumberViewModel by viewModels()
+    val viewModel: FactorizationViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentPrimeNumberBinding.inflate(inflater, container, false)
+        _binding = FragmentFactorizationNumberBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -42,36 +40,23 @@ class PrimeNumberFragment : Fragment() {
             binding.resultCardCv.visibility = View.GONE
         }
 
-        binding.checkBtn.setOnClickListener {
+        binding.calculateBtn.setOnClickListener {
             val number = binding.numberEt.text.toString().toIntOrNull()
             if (number != null) {
-                val isPrime = checkPrimeNumber(number)
-                showResult(isPrime)
+                val result = viewModel.factorizeNumber(number)
+                showResult(result.toString())
             } else {
                 binding.resultTv.text = getString(R.string.raqamni_kiriting)
                 binding.resultCardCv.visibility = View.VISIBLE
             }
         }
+
+
     }
 
-    fun checkPrimeNumber(number: Int): Boolean {
-        return viewModel.checkPrimeNumber(number)
-    }
-
-    fun showResult(isPrime: Boolean) {
+    fun showResult(result: String) {
         binding.resultCardCv.visibility = View.VISIBLE
-        binding.resultTv.text =
-            if (isPrime) getString(R.string.raqam_tub) else getString(R.string.raqam_tub_emas)
+        binding.resultTv.text = getString(R.string.javob, result)
         binding.numberEt.text.clear()
-        binding.resultCardCv.postDelayed({
-            if (_binding != null) {
-                binding.resultCardCv.visibility = View.GONE
-            }
-        }, 5000)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

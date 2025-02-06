@@ -28,6 +28,10 @@ class HomeRepositoryImpl @Inject constructor(
                     "EKUKni topish",
                     R.id.ekubEkukFinderFragment,
                     bundleOf("title" to "EKUK")
+                ),
+                Option(
+                    "Ko'paytuvchilarga ajratish",
+                    R.id.factorizationNumberFragment
                 )
             )
         )

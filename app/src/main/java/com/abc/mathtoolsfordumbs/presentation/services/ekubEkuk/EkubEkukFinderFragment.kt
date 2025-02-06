@@ -68,22 +68,16 @@ class EkubEkukFinderFragment : Fragment() {
                 binding.resultTv.text =
                     getString(R.string.ekub_yoki_ekuk_ni_topish_uchun_kamida_2_ta_raqam_kiriting)
                 binding.resultCardCv.visibility = View.VISIBLE
-                binding.resultCardCv.postDelayed({
-                    if (_binding != null) {
-                        binding.resultCardCv.visibility = View.GONE
-                    }
-                }, 5000)
             }
+        }
+
+        binding.closeCardIv.setOnClickListener {
+            binding.resultCardCv.visibility = View.GONE
         }
     }
     fun showResult(result: Int) {
         binding.resultCardCv.visibility = View.VISIBLE
-        binding.resultTv.text = getString(R.string.javob, result)
-        binding.resultCardCv.postDelayed({
-            if (_binding != null) {
-                binding.resultCardCv.visibility = View.GONE
-            }
-        }, 5000)
+        binding.resultTv.text = getString(R.string.javob, result.toString())
     }
 
     override fun onDestroyView() {

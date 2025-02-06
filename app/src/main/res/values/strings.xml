@@ -15,4 +15,5 @@
     <string name="hisoblash">Hisoblash</string>
     <string name="ekub_yoki_ekuk_ni_topish_uchun_kamida_2_ta_raqam_kiriting">EKUB yoki EKUK ni topish uchun kamida 2 ta raqam kiriting va raqam bo\'sh yoki 0 bo\'lishi mumkin emas</string>
     <string name="javob">Javob: %1$s</string>
+    <string name="raqamni_omillariga_ajratish_uchun_hisoblamoqchi_bo_lgan_raqamingizni_kiriting_va_hisoblashni_bosing">Raqamni ko\'paytuvchilarga ajratish (faktorialini topish) uchun hisoblamoqchi bo\'lgan raqamingizni kiriting va hisoblashni bosing</string>
 </resources>

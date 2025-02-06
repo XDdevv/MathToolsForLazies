@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:padding="8dp"
-    tools:context=".presentation.services.primeNumber.PrimeNumberFragment">
+    tools:context=".presentation.services.factorization.FactorizationNumberFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/back_iv"
@@ -29,7 +29,7 @@
         android:layout_marginTop="18dp"
         android:fontFamily="@font/font_black"
         android:padding="4dp"
-        android:text="@string/tub_sonni_aniqlash_uchun_pastda_raqamni_kiriting_va_tekshirishni_bosing"
+        android:text="@string/raqamni_omillariga_ajratish_uchun_hisoblamoqchi_bo_lgan_raqamingizni_kiriting_va_hisoblashni_bosing"
         android:textAlignment="textStart"
         android:textColor="@color/textPrimary"
         android:textSize="24sp"
@@ -55,14 +55,14 @@
         app:layout_constraintTop_toBottomOf="@id/title_tv" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/check_btn"
+        android:id="@+id/calculate_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/button_bg"
         android:fontFamily="@font/font_bold"
         android:paddingHorizontal="32dp"
-        android:text="@string/tekshirish"
+        android:text="@string/hisoblash"
         android:textAllCaps="false"
         android:textColor="@color/colorBackground"
         android:textSize="20sp"
@@ -74,13 +74,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:visibility="gone"
         app:cardBackgroundColor="@color/colorSurface"
         app:cardCornerRadius="16dp"
+        android:visibility="gone"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:contentPadding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/check_btn">
+        app:layout_constraintTop_toBottomOf="@id/calculate_btn">
 
         <TextView
             android:id="@+id/result_tv"
@@ -97,12 +97,12 @@
             android:id="@+id/close_card_iv"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_gravity="top|end"
             android:layout_marginTop="4dp"
             android:background="@color/warningColor"
             android:padding="4dp"
             android:src="@drawable/ic_close"
             app:contentPadding="8dp"
-            android:layout_gravity="top|end"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
             app:tint="@color/colorBackground" />
     </androidx.cardview.widget.CardView>
