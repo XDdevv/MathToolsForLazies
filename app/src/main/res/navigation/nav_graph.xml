@@ -30,4 +30,9 @@
         android:name="com.abc.mathtoolsfordumbs.presentation.services.factorization.FactorizationNumberFragment"
         android:label="fragment_factorization_number"
         tools:layout="@layout/fragment_factorization_number" />
+    <fragment
+        android:id="@+id/findDivisorsFragment"
+        android:name="com.abc.mathtoolsfordumbs.presentation.services.divisors.FindDivisorsFragment"
+        android:label="fragment_find_divisors"
+        tools:layout="@layout/fragment_find_divisors" />
 </navigation>

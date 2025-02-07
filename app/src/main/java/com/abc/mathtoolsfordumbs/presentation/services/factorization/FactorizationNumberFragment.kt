@@ -59,4 +59,10 @@ class FactorizationNumberFragment : Fragment() {
         binding.resultTv.text = getString(R.string.javob, result)
         binding.numberEt.text.clear()
     }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

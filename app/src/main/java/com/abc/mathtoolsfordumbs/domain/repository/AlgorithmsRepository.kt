@@ -5,4 +5,5 @@ interface AlgorithmsRepository {
     fun gcdMultiple(numbers: List<Int>): Int
     fun lcmMultiple(numbers: List<Int>): Int
     fun factorization(number: Int): List<Int>
+    fun findDivisors(number: Int): List<Int>
 }

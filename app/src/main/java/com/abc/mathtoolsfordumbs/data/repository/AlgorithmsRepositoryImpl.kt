@@ -32,6 +32,21 @@ class AlgorithmsRepositoryImpl @Inject constructor(
         return primeFactorization(number)
     }
 
+    override fun findDivisors(number: Int): List<Int> {
+        return findingDivisors(number)
+    }
+
+    fun findingDivisors(n: Int): List<Int> {
+        val divisors = mutableListOf<Int>()
+        for (i in 1..n) {
+            if (n % i == 0) {
+                divisors.add(i)
+            }
+        }
+        return divisors
+    }
+
+
     fun gcd(a: Int, b: Int): Int {
         return if (b == 0) a else gcd(b, a % b)
     }

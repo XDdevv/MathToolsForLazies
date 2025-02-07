@@ -32,6 +32,10 @@ class HomeRepositoryImpl @Inject constructor(
                 Option(
                     "Ko'paytuvchilarga ajratish",
                     R.id.factorizationNumberFragment
+                ),
+                Option(
+                    "Bo'linuvchilarni topish",
+                    R.id.findDivisorsFragment
                 )
             )
         )
