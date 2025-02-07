@@ -36,7 +36,15 @@ class HomeRepositoryImpl @Inject constructor(
                 Option(
                     "Bo'linuvchilarni topish",
                     R.id.findDivisorsFragment
-                )
+                ),
+                Option(
+                    "Faktorialni hisoblash",
+                    R.id.factorialCalculatorFragment
+                ),
+                Option(
+                    "Fibonacci sonlarini chiqarish",
+                    R.id.finobacciFragment
+                ),
             )
         )
     }

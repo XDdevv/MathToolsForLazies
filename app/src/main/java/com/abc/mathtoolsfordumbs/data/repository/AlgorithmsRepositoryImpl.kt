@@ -36,6 +36,26 @@ class AlgorithmsRepositoryImpl @Inject constructor(
         return findingDivisors(number)
     }
 
+    override fun factorialCalculator(number: Int): Long {
+        return factorial(number)
+    }
+
+    override fun fibonacciGenerator(number: Int): List<Int> {
+        return fibonacci(number)
+    }
+
+    fun fibonacci(n: Int): List<Int> {
+        val sequence = mutableListOf(0, 1)
+        for (i in 2 until n) {
+            sequence.add(sequence[i - 1] + sequence[i - 2])
+        }
+        return sequence
+    }
+
+    fun factorial(n: Int): Long {
+        return if (n == 0) 1 else n * factorial(n - 1)
+    }
+
     fun findingDivisors(n: Int): List<Int> {
         val divisors = mutableListOf<Int>()
         for (i in 1..n) {

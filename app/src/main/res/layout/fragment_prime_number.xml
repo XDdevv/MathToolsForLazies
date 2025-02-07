@@ -46,6 +46,8 @@
         android:fontFamily="@font/font_bold"
         android:hint="@string/raqamni_kiriting"
         android:importantForAutofill="no"
+        android:clickable="true"
+        android:focusable="true"
         android:inputType="number"
         android:maxLines="1"
         android:padding="12dp"
@@ -90,6 +92,7 @@
             android:padding="4dp"
             android:textColor="@color/textPrimary"
             android:textSize="28sp"
+            android:textIsSelectable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 

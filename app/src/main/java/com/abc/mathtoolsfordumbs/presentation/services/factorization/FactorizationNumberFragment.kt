@@ -32,6 +32,8 @@ class FactorizationNumberFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.numberEt.requestFocus()
+
         binding.backIv.setOnClickListener {
             findNavController().popBackStack()
         }

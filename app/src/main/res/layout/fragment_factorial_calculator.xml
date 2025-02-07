@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:padding="8dp"
-    tools:context=".presentation.services.factorization.FactorizationNumberFragment">
+    tools:context=".presentation.services.factorialCalculator.FactorialCalculatorFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/back_iv"
@@ -29,7 +29,7 @@
         android:layout_marginTop="18dp"
         android:fontFamily="@font/font_black"
         android:padding="4dp"
-        android:text="@string/raqamni_omillariga_ajratish_uchun_hisoblamoqchi_bo_lgan_raqamingizni_kiriting_va_hisoblashni_bosing"
+        android:text="@string/sonni_faktorialini_hisoblash_uchun_raqamni_kiriting_va_hisoblashga_bosing"
         android:textAlignment="textStart"
         android:textColor="@color/textPrimary"
         android:textSize="24sp"
@@ -43,12 +43,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/input_bg"
+        android:clickable="true"
+        android:focusable="true"
         android:fontFamily="@font/font_bold"
         android:hint="@string/raqamni_kiriting"
         android:importantForAutofill="no"
         android:inputType="number"
-        android:clickable="true"
-        android:focusable="true"
         android:maxLines="1"
         android:padding="12dp"
         android:textColor="@color/textPrimary"
@@ -76,9 +76,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:visibility="gone"
         app:cardBackgroundColor="@color/colorSurface"
         app:cardCornerRadius="16dp"
-        android:visibility="gone"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:contentPadding="8dp"
@@ -91,9 +91,9 @@
             android:fontFamily="@font/font_black"
             android:padding="4dp"
             android:textColor="@color/textPrimary"
+            android:textIsSelectable="true"
             android:textSize="28sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textIsSelectable="true"
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView

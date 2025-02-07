@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:padding="8dp"
-    tools:context=".presentation.services.ekubEkuk.EkubEkukFinderFragment">
+    tools:context=".presentation.services.finobacciGenerator.FinobacciFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,6 +33,7 @@
             android:layout_marginTop="18dp"
             android:fontFamily="@font/font_black"
             android:padding="4dp"
+            android:text="@string/finobacci_raqamlarini_generatsiya_qilish_uchun_raqamni_kiriting_va_generatsiyaga_bosing"
             android:textAlignment="textStart"
             android:textColor="@color/textPrimary"
             android:textSize="24sp"
@@ -40,49 +41,39 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/back_iv" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/add_number_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/button_bg"
-            android:drawableStart="@drawable/ic_add"
-            android:drawablePadding="8dp"
-            android:drawableTint="@color/colorBackground"
-            android:fontFamily="@font/font_bold"
-            android:paddingHorizontal="16dp"
-            android:text="@string/raqam_qo_shish"
-            android:textAllCaps="false"
-            android:textColor="@color/colorBackground"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_tv" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/numbers_list_rv"
+        <EditText
+            android:id="@+id/number_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:layout_constraintTop_toBottomOf="@id/add_number_btn"
-            app:spanCount="2"
-            tools:listitem="@layout/item_ekub_ekuk_number" />
+            android:layout_marginTop="32dp"
+            android:background="@drawable/input_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/font_bold"
+            android:hint="@string/raqamni_kiriting"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/calculate_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/button_bg"
             android:fontFamily="@font/font_bold"
             android:paddingHorizontal="32dp"
-            android:text="@string/hisoblash"
+            android:text="@string/generatsiya"
             android:textAllCaps="false"
             android:textColor="@color/colorBackground"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/numbers_list_rv" />
+            app:layout_constraintTop_toBottomOf="@+id/number_et" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/result_card_cv"
@@ -122,7 +113,6 @@
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
                 app:tint="@color/colorBackground" />
         </androidx.cardview.widget.CardView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.core.widget.NestedScrollView>
+</ScrollView>

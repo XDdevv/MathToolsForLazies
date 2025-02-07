@@ -35,4 +35,14 @@
         android:name="com.abc.mathtoolsfordumbs.presentation.services.divisors.FindDivisorsFragment"
         android:label="fragment_find_divisors"
         tools:layout="@layout/fragment_find_divisors" />
+    <fragment
+        android:id="@+id/factorialCalculatorFragment"
+        android:name="com.abc.mathtoolsfordumbs.presentation.services.factorialCalculator.FactorialCalculatorFragment"
+        android:label="fragment_factorial_calculator"
+        tools:layout="@layout/fragment_factorial_calculator" />
+    <fragment
+        android:id="@+id/finobacciFragment"
+        android:name="com.abc.mathtoolsfordumbs.presentation.services.finobacciGenerator.FinobacciFragment"
+        android:label="fragment_finobacci"
+        tools:layout="@layout/fragment_finobacci" />
 </navigation>

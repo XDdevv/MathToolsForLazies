@@ -1,4 +1,4 @@
-package com.abc.mathtoolsfordumbs.presentation.services.divisors
+package com.abc.mathtoolsfordumbs.presentation.services.finobacciGenerator
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,24 +8,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.abc.mathtoolsfordumbs.R
-import com.abc.mathtoolsfordumbs.databinding.FragmentFindDivisorsBinding
-import com.abc.mathtoolsfordumbs.presentation.services.divisors.vm.FindDivisorsViewModel
+import com.abc.mathtoolsfordumbs.databinding.FragmentFinobacciBinding
+import com.abc.mathtoolsfordumbs.presentation.services.finobacciGenerator.vm.FinobacciViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FindDivisorsFragment : Fragment() {
+class FinobacciFragment : Fragment() {
 
-    private var _binding: FragmentFindDivisorsBinding? = null
+    private var _binding: FragmentFinobacciBinding? = null
     private val binding get() = _binding!!
 
-    val viewModel by viewModels<FindDivisorsViewModel>()
+    val viewModel by viewModels<FinobacciViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentFindDivisorsBinding.inflate(inflater, container, false)
+        _binding = FragmentFinobacciBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -38,26 +38,30 @@ class FindDivisorsFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        binding.calculateBtn.setOnClickListener {
+            val number = binding.numberEt.text.toString().toIntOrNull()
+            if (number != null) {
+                val fibonacciNumbers = viewModel.generateFinobacciSquence(number)
+                showResult(fibonacciNumbers.joinToString(", "))
+            } else {
+                showResult(null)
+            }
+        }
+
         binding.closeCardIv.setOnClickListener {
             binding.resultCardCv.visibility = View.GONE
         }
 
-        binding.calculateBtn.setOnClickListener {
-            val number = binding.numberEt.text.toString().toIntOrNull()
-            if (number != null) {
-                val divisors = viewModel.findDivisors(number)
-                showResult(divisors)
-            } else {
-                binding.resultTv.text = getString(R.string.raqamni_kiriting)
-                binding.resultCardCv.visibility = View.VISIBLE
-            }
-        }
     }
 
-    private fun showResult(result: String) {
-        binding.resultCardCv.visibility = View.VISIBLE
-        binding.resultTv.text = getString(R.string.javob, result.toString())
-        binding.numberEt.text.clear()
+    fun showResult(result: String?) {
+        if (result != null) {
+            binding.resultTv.text = result
+            binding.resultCardCv.visibility = View.VISIBLE
+        } else {
+            binding.resultTv.text = getString(R.string.raqamni_kiriting)
+            binding.resultCardCv.visibility = View.VISIBLE
+        }
     }
 
     override fun onDestroyView() {

@@ -7,7 +7,6 @@
     <string name="raqam_noto_g_ri">Raqam noto\'g\'ri</string>
     <string name="raqam_tub">Raqam tub</string>
     <string name="raqam_tub_emas">Raqam tub emas</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ekub_ni_topish_uchun_raqamlarni_kiring_va_hisoblashni_bosing">EKUBni topish uchun raqamlarni kiring va hisoblashni bosing</string>
     <string name="ekuk_ni_topish_uchun_raqamlarni_kiring_va_hisoblashni_bosing">EKUKni topish uchun raqamlarni kiring va hisoblashni bosing</string>
@@ -15,6 +14,9 @@
     <string name="hisoblash">Hisoblash</string>
     <string name="ekub_yoki_ekuk_ni_topish_uchun_kamida_2_ta_raqam_kiriting">EKUB yoki EKUK ni topish uchun kamida 2 ta raqam kiriting va raqam bo\'sh yoki 0 bo\'lishi mumkin emas</string>
     <string name="javob">Javob: %1$s</string>
-    <string name="raqamni_omillariga_ajratish_uchun_hisoblamoqchi_bo_lgan_raqamingizni_kiriting_va_hisoblashni_bosing">Raqamni ko\'paytuvchilarga ajratish (faktorialini topish) uchun hisoblamoqchi bo\'lgan raqamingizni kiriting va hisoblashni bosing</string>
+    <string name="raqamni_omillariga_ajratish_uchun_hisoblamoqchi_bo_lgan_raqamingizni_kiriting_va_hisoblashni_bosing">Raqamni ko\'paytuvchilarga ajratish  uchun hisoblamoqchi bo\'lgan raqamingizni kiriting va hisoblashni bosing</string>
     <string name="raqamga_qoldiqsiz_bo_linuvchi_sonlarni_aniqlash_uchun_raqamni_kiriting_va_hisoblashga_bosing">Raqamga qoldiqsiz bo\'linuvchi sonlarni aniqlash uchun raqamni kiriting va hisoblashga bosing</string>
+    <string name="sonni_faktorialini_hisoblash_uchun_raqamni_kiriting_va_hisoblashga_bosing">Faktorial ni hisoblash uchun raqamni kiriting va hisoblashga bosing</string>
+    <string name="generatsiya">Generatsiya</string>
+    <string name="finobacci_raqamlarini_generatsiya_qilish_uchun_raqamni_kiriting_va_generatsiyaga_bosing">Finobacci raqamlarini generatsiya qilish uchun raqamni kiriting va generatsiyaga bosing</string>
 </resources>
